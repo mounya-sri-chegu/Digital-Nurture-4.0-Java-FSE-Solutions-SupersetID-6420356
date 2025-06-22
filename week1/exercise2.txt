@@ -1,0 +1,66 @@
+Exercise 2: E-commerce Platform Search Function
+
+Understanding Asymptotic Notation
+
+Big O Notation
+
+Big O notation describes how an algorithm's performance changes as input size grows. It focuses on the dominant factor - if an algorithm takes 3n² + 5n + 2 operations, we call it O(n²) because the n² term matters most with large inputs.
+
+Common classifications:
+- O(1): Constant - same speed regardless of size
+- O(log n): Logarithmic - very efficient 
+- O(n): Linear - scales directly with input
+- O(n²): Quadratic - slows down quickly with larger data
+
+Big O helps compare algorithms and predict real-world performance.
+
+Search Operation Scenarios
+
+Best Case: Finding the target immediately. Both linear and binary search can be O(1) when lucky, but this rarely happens.
+
+Average Case: Expected performance across typical inputs. Linear search averages O(n), binary search averages O(log n). This matters most for real applications.
+
+Worst Case: Maximum time needed. Linear search is O(n) when the target is last or missing. Binary search stays O(log n). Critical when you need predictable performance.
+
+These scenarios help you choose the right algorithm based on whether you need reliability, good average performance, or worst-case guarantees.
+
+
+
+Analysis
+How Do These Search Methods Work?
+Linear search: is like looking through a messy drawer - you check each item one by one until you find what you need. If you have 1,000 products, you might need to check all 1,000 to find the right one.
+
+Binary search: is like using a dictionary - you open to the middle, see if your word comes before or after, then eliminate half and repeat. With 1,000 products, you'd find any item in just 10 steps maximum.
+
+What This Means for Your Business
+
+When you had 50 products, both methods worked fine. But now with thousands of products and growing, the difference is huge:
+- Linear search gets slower as your catalog grows
+- Binary search stays lightning-fast even with millions of products
+
+During busy shopping periods with hundreds of customers searching at once, this performance gap becomes critical.
+
+Which One Should You Use?
+
+Choose binary search for:
+- Product ID lookups
+- "Reorder" features
+- Large, organized databases
+- Speed-critical operations
+
+Choose linear search for:
+- Customer searches like "blue shoes" or "kitchen gadgets"
+- Browsing and discovery
+- Complex filtering (price + brand + features)
+- Frequently changing inventory
+
+The Smart Approach
+
+Most successful online stores use both:
+- Binary search for backend systems and exact lookups
+- Linear search (or advanced methods) for customer-facing search
+
+Bottom Line
+
+The best search method is the one that makes your customers happy. Fast, relevant results matter more than perfect technical efficiency. Choose based on how your customers actually shop, not just which algorithm looks better on paper.
+

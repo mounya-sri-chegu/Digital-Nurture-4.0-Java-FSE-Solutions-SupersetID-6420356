@@ -1,0 +1,29 @@
+Exercise 7: Financial Forecasting
+
+1. Understanding Recursive Algorithms
+
+Recursion is when a function calls itself to solve problems by breaking them into smaller pieces. Think of it like financial planning - to figure out your retirement savings in 30 years, you need to know what you'll have in 29 years, which depends on what you have in 28 years, and so on.
+
+In financial forecasting, recursion works really well because money problems often follow patterns where each step depends on the previous one. Compound interest is a perfect example - this year's balance becomes the starting point for next year's calculation.
+
+What makes recursion so appealing is that it mirrors how we naturally think about financial growth. Instead of writing complex loops, you can express the relationship directly: "Next year's value equals this year's value times the growth rate." The code ends up looking almost exactly like the math formula.
+
+2. Analysis
+
+Time Complexity Issues
+
+Here's where things can get tricky. A poorly written recursive algorithm can become incredibly slow - we're talking about calculations that might take hours instead of seconds. This happens when the algorithm keeps recalculating the same values over and over again.
+
+For simple financial projections, recursion usually runs in O(n) time, meaning if you double the time period, the calculation takes roughly twice as long. But if you're not careful, some recursive approaches can have exponential complexity, where adding just one more year to your forecast could double the computation time.
+
+Making It Faster
+
+The good news is that there are proven ways to fix these performance problems:
+
+Memoization is like keeping a financial spreadsheet - once you calculate a value, you write it down so you don't have to recalculate it later. This single technique can turn a slow algorithm into a fast one.
+
+Bottom-up calculation means starting from year one and building forward, rather than starting from the final year and working backward. It's more intuitive and usually faster.
+
+Converting to loops sacrifices some elegance but gives you the best performance. Instead of function calls, you use simple loops that any computer can handle efficiently.
+
+The key is choosing the right approach for your situation. For quick prototypes or educational tools, simple recursion works fine. For production systems handling real client portfolios, you'll want the optimized versions.
